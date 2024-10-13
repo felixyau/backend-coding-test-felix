@@ -1,0 +1,15 @@
+POST http://localhost:4001
+Content-Type: application/json
+Authorization: Bearer your-secret-token-here
+X-REQUEST-TYPE: GraphQL
+
+query ($nodeId: ID) {
+  node(nodeId: $nodeId) {
+    _id
+    parentIds
+  }
+}
+
+{
+  "nodeId": "6297164810f52524ba1a9300"
+}
